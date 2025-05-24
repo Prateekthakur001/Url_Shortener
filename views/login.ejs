@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: linear-gradient(to bottom right, #ffffff, #f1f4f9);
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 420px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .login-container h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+      font-size: 2rem;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 6px;
+      color: #555;
+      font-weight: 600;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 15px;
+      padding-left: 40px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      background-color: #fdfdfd;
+      position: relative;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .input-group input:focus {
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+      outline: none;
+    }
+
+    .input-group .icon {
+      position: absolute;
+      margin-left: 10px;
+      margin-top: 14px;
+      font-size: 1rem;
+      color: #777;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      background-color: #667eea;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #5a67d8;
+    }
+
+    .form-wrapper {
+      position: relative;
+    }
+
+    .form-wrapper .input-group {
+      position: relative;
+    }
+
+    .form-wrapper .input-group .icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form action="/user/login" method="post" class="form-wrapper">
+      <div class="input-group">
+        <label for="email">Email</label>
+        <span class="icon">📧</span>
+        <input type="email" name="email" id="email" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <span class="icon">🔒</span>
+        <input type="password" name="password" id="password" required>
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>

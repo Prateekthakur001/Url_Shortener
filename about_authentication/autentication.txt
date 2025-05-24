@@ -1,0 +1,3 @@
+Authentication Patterns:-
+Statefull:- Which maintains state or data or server side.
+Stateless:- Which has no state.
