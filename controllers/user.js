@@ -20,15 +20,15 @@ async function handleUserLogin(req,res) {
     email,
     password
   });
-  
+
   if(!user) return res.render('login',{
     error: 'Invalid email or password!!'
   });
 
   const token = setUser(user);
-  res.cookie('uid',token);
-  
+  res.cookie('uid',token); // first parameter is name of the cookie and second parameter is token that we are sending.
   return res.redirect('/');
+  // return res.json({ token });
 }
 
 module.exports = {

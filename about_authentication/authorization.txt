@@ -1,0 +1,9 @@
+Authentication vs Authorization:-
+🔸 Feature	                                   ✅ Authentication	                                         ✅ Authorization
+❓ Definition	                               Verifies who the user is	                                  Determines what the user can do
+🔑 Purpose	                                  Confirm identity	                                  Grant access to resources based on roles
+🛠️ Process	                      Usually done via login (email/password) or tokens            	Happens after authentication is successful
+🎟️ Data Used	                         Username, password, OTP, biometric, JWT	                       Roles, permissions, access policies
+🔁 Occurs When?	                      First step — before anything else	                                  After authentication
+🚪 Example	                            You log in to your account	                            You can only access /admin if you're admin
+👮‍♂️ Analogy	                              Showing your ID at the gate	                              Being allowed into the VIP area

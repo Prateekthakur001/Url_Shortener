@@ -1,3 +1,8 @@
 Authentication Patterns:-
 Statefull:- Which maintains state or data or server side.
 Stateless:- Which has no state.
+
+// Cookies are domain specific , so if you have a cookie set on example.com, it will not be available on sub.example.com 
+
+// res. cookie('name', 'tobi', { domain: '.example.com', path: '/admin' , secure: true })
+res. cookie(' rememberme' ,'1', { expires: new Date(Date.now() + 900000), httpOnly: true 3)
